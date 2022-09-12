@@ -1,0 +1,150 @@
+@import '../node_modules/normalize-scss/sass/normalize.scss';
+@import './scss/var';
+@import './scss/setup';
+@import './scss/cookie';
+
+header {
+  height: 100vh;
+}
+
+nav {
+  margin-top: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+
+  & .logotype__item {
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  & .nav-menu__item {
+    transition: 0.5s ease-in-out;
+  }
+
+  & .nav-menu__item:hover {
+    color: #88c0fa;
+  }
+
+  & .logotype__item:hover {
+    transform: rotate(360deg);
+  }
+
+  & .company-name {
+    margin: 0 100px 0 0;
+  }
+
+  & .account {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & span {
+      font-family: 'Noto Sans', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}
+
+.header-content__wrapper {
+  margin-top: -150px;
+  width: 100%;
+  display: flex;
+  //justify-content: space-between;
+  align-items: center;
+}
+
+.header-section {
+  &__title {
+    @include section-title;
+    margin-bottom: 130px;
+  }
+
+  &__text {
+    @include section-text;
+    margin-left: 105px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -140px;
+      width: 140px;
+      border: 3px solid white;
+      border-radius: 5px;
+      background-color: white;
+      transform: rotate(120deg);
+
+    }
+
+    &:after {
+      content: '';
+      background: $light-blue;
+      top: -120px;
+      left: -120px;
+      filter: blur(100px);
+      border-radius: 70px;
+      width: 200px;
+      height: 300px;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.8;
+    }
+  }
+
+}
+
+.header-section-left {
+  height: 900px;
+  width: 400px;
+  margin-left: 100px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: $purple-shadow;
+    width: 600px;
+    height: 150px;
+    top: 0;
+    border-radius: 300px 200px 50px 69px;
+    transform: rotate(20deg);
+    filter: blur(250px);
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  & .header-img {
+    height: 100%;
+
+
+  }
+}
+
+.footer__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  align-items: center;
+}
+
+.footer-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 70px;
+  color: white;
+}
+.footer-img {
+  width: 25%;
+  height: 15%;
+  cursor: pointer;
+}

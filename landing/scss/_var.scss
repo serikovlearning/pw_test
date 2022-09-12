@@ -1,0 +1,81 @@
+$bg: #020202;
+$purple-shadow: #FA00FF;
+$light-blue: rgba(96, 92, 234, 0.5);
+$gradient: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+$red: #FF0000;
+$black: #212834;
+$white: #ffffff;
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./font/roboto/roboto-v30-latin-regular.woff2"),
+  url("./font/roboto/roboto-v30-latin-regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./font/roboto/roboto-v30-latin-500.woff2"),
+  url("./font/roboto/roboto-v30-latin-500.woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./font/roboto/roboto-v30-latin-700.woff2"),
+  url("./font/roboto/roboto-v30-latin-700.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/montserrat/montserrat-v25-latin-regular.woff2"),
+  url("./font/montserrat/montserrat-v25-latin-regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/montserrat/montserrat-v25-latin-500.woff2"),
+  url("./font/montserrat/montserrat-v25-latin-500.woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./font/montserrat/montserrat-v25-latin-700.woff2"),
+  url("./font/montserrat/montserrat-v25-latin-700.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./font/noto-sans/noto-sans-v27-latin-regular.woff2"),
+  url("./font/noto-sans/noto-sans-v27-latin-regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url("./font/noto-sans/noto-sans-v27-latin-700.woff2"),
+  url("./font/noto-sans/noto-sans-v27-latin-700.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
