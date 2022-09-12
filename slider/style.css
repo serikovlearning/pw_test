@@ -17,14 +17,16 @@ body {
   transform: translateY(-50%);
   top: 50%;
   cursor: pointer;
+  -webkit-filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, 1));
+  filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, 1));
 }
 
 .slide-left {
-  left: -30px;
+  left: 10px;
 }
 
 .slide-right {
-  right: -30px;
+  right: 10px;
 }
 
 
