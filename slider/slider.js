@@ -11,21 +11,23 @@ const sliderWidth = sliderImg[0].clientWidth,
 let slideCounter = 0,
     btnActive = false
 
-leftBtn.addEventListener('click', () => {
+rightBtn.addEventListener('click', () => {
     if (!btnActive) {
         sliderImg.forEach((slider, index) => {
             dragSlide(false)
         })
         slideCounter -= 1
+        checkPagValue()
     }
 })
 
-rightBtn.addEventListener('click', () => {
+leftBtn.addEventListener('click', () => {
     if (!btnActive) {
         sliderImg.forEach((slider, index) => {
             dragSlide(true)
         })
         slideCounter += 1
+        checkPagValue()
     }
 })
 
@@ -59,3 +61,44 @@ function dragSlide(side) {
         }
     }, intervalTime)
 }
+
+function createPaginationBtn() {
+    let pagBtn = document.createElement('span')
+    pagBtn.classList.add('pagination-btn')
+    pagBtn.textContent = '.'
+    return pagBtn
+}
+
+const paginationWrapper = slider.querySelector('.pagination')
+for (let slide of sliderImg) {
+    const pagBtn = createPaginationBtn()
+    paginationWrapper.appendChild(pagBtn)
+}
+const pagBtns = paginationWrapper.querySelectorAll('.pagination-btn')
+function checkPagValue() {
+    pagBtns.forEach((pagBtn, index) => {
+        if (index === -slideCounter) {
+            pagBtn.classList.add('active')
+        } else {
+            pagBtn.classList.remove('active')
+        }
+    })
+}
+checkPagValue()
+pagBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+      pagBtns.forEach(item => {
+          item.classList.remove('active')
+      })
+      btn.classList.add('active')
+      if (slideCounter < -index) {
+          slideCounter = -index - 1
+          dragSlide(true)
+          slideCounter += 1
+      } else {
+          slideCounter = -index + 1
+          dragSlide(false)
+          slideCounter -= 1
+      }
+  })
+})
