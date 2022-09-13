@@ -47,3 +47,32 @@ body {
     font-size: 12px;
   }
 }
+
+@mixin contact-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  color: white;
+
+  @media (max-width: $breakpoint768) {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
+@mixin contact-link{
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  text-decoration-line: underline;
+  color: white;
+
+  @media (max-width: $breakpoint768) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

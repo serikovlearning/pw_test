@@ -69,89 +69,6 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #020202;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.cookie {
-  position: absolute;
-  bottom: 0;
-  background-color: #212834;
-  width: 100%;
-  height: 90px;
-  padding: 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  transform: translateY(50%);
-  box-shadow: 0px -10px 10px -5px rgba(0, 0, 0, 0.3);
-}
-@media (max-width: 767.99px) {
-  .cookie {
-    padding: 0 16px;
-  }
-}
-.cookie-text {
-  font-family: "Noto Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.36;
-  color: #ffffff;
-  margin: 0 0 0 80px;
-}
-@media (max-width: 767.99px) {
-  .cookie-text {
-    font-size: 12px;
-  }
-}
-@media (max-width: 767.99px) {
-  .cookie-text {
-    margin: 0;
-  }
-}
-.cookie-btn {
-  font-family: "Noto Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.36;
-  color: #ffffff;
-  border: 0.5px solid #ffffff;
-  outline: none;
-  padding: 15px 50px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 6px;
-  cursor: pointer;
-}
-@media (max-width: 767.99px) {
-  .cookie-btn {
-    font-size: 12px;
-  }
-}
-@media (max-width: 767.99px) {
-  .cookie-btn {
-    padding: 8px 25px;
-  }
-}
-
-header {
-  height: 100vh;
-}
-
 nav {
   margin-top: 30px;
 }
@@ -178,7 +95,7 @@ nav {
 }
 @media (max-width: 1098.99px) {
   .nav-menu .company-name {
-    margin: 0 20% 0 0;
+    margin: 0 30% 0 0;
   }
 }
 .nav-menu .account {
@@ -401,7 +318,138 @@ nav {
 }
 @media (max-width: 477.99px) {
   .footer-img {
-    width: 60%;
+    width: 70%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020202;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.cookie {
+  position: fixed;
+  bottom: 0;
+  background-color: #212834;
+  width: 100%;
+  height: 90px;
+  padding: 0 24px;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(50%);
+  box-shadow: 0px -10px 10px -5px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+@media (max-width: 767.99px) {
+  .cookie {
+    padding: 0 16px;
+  }
+}
+.cookie-text {
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  color: #ffffff;
+  margin: 0 0 0 80px;
+}
+@media (max-width: 767.99px) {
+  .cookie-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767.99px) {
+  .cookie-text {
+    margin: 0;
+  }
+}
+.cookie-btn {
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.36;
+  color: #ffffff;
+  border: 0.5px solid #ffffff;
+  outline: none;
+  padding: 15px 50px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  cursor: pointer;
+}
+@media (max-width: 767.99px) {
+  .cookie-btn {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767.99px) {
+  .cookie-btn {
+    padding: 8px 25px;
+  }
+}
+
+.contact__wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.contact__wrapper .contact__content {
+  flex: 0 0 40%;
+  padding: 55px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+@media (max-width: 767.99px) {
+  .contact__wrapper .contact__content {
+    flex: 1 1 40%;
+  }
+}
+.contact__wrapper .contact__content-title {
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  color: white;
+}
+@media (max-width: 767.99px) {
+  .contact__wrapper .contact__content-title {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+.contact__wrapper .contact__content-link {
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  text-decoration-line: underline;
+  color: white;
+}
+@media (max-width: 767.99px) {
+  .contact__wrapper .contact__content-link {
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 
