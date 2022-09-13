@@ -27,14 +27,15 @@
     @media (max-width: $breakpoint768) {
       top: 5%;
       background-image: url("./img/goals/goals-phone-rotate.png");
-      background-size: 60%;
+      background-size: 75%;
       background-position-x: center;
+      height: 50%;
     }
 
     @media (max-width: $breakpoint477) {
       top: 5%;
       background-image: url("./img/goals/goals-phone-rotate.png");
-      background-size: 78%;
+      background-size: 100%;
       background-position-x: center;
     }
   }
@@ -67,7 +68,7 @@
 
     &-title {
       @include section-title;
-      margin: -100px 0 20px;
+      margin: -100px 0 0;
       position: relative;
 
       &:after {
