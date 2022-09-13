@@ -11,6 +11,10 @@
   @media (max-width: $breakpoint768) {
     margin-top: 700px;
   }
+  @media (max-width: $breakpoint477) {
+    margin-top: 300px;
+  }
+
 }
 
 .scanner-bg {
@@ -24,6 +28,10 @@
   @media (max-width: $breakpoint768) {
     height: 350px;
     top: -30%;
+  }
+  @media (max-width: $breakpoint477) {
+    height: 350px;
+    top: -20%;
   }
 }
 

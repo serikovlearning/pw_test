@@ -70,6 +70,13 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
+
+.container-second {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 nav {
   margin-top: 30px;
 }
@@ -346,6 +353,13 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
+
+.container-second {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .cookie {
   position: fixed;
   bottom: 0;
@@ -591,6 +605,11 @@ body {
     margin-top: 700px;
   }
 }
+@media (max-width: 477.99px) {
+  .scanner {
+    margin-top: 300px;
+  }
+}
 
 .scanner-bg {
   width: 100%;
@@ -605,6 +624,12 @@ body {
   .scanner-bg {
     height: 350px;
     top: -30%;
+  }
+}
+@media (max-width: 477.99px) {
+  .scanner-bg {
+    height: 350px;
+    top: -20%;
   }
 }
 
@@ -948,6 +973,8 @@ body {
   .qr .qr-content-pointer {
     top: 100%;
     left: 90%;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 .qr .qr-content-pointer:after {
@@ -1015,11 +1042,25 @@ body {
 }
 .reel-content .reel-img {
   margin: 0 auto;
-  width: 838px;
+  width: 100%;
+  min-width: 360px;
+  max-width: 838px;
+}
+@media (max-width: 788.99px) {
+  .reel-content .reel-img {
+    margin-top: 150px;
+    margin-left: -30px;
+  }
 }
 .reel-content .reel-info {
   align-self: flex-end;
   width: 40%;
+}
+@media (max-width: 1098.99px) {
+  .reel-content .reel-info {
+    align-self: flex-start;
+    width: 90%;
+  }
 }
 .reel-content .reel-info-title {
   font-family: "Montserrat", sans-serif;
@@ -1073,31 +1114,87 @@ body {
   line-height: 27px;
   background: #020202;
   width: fit-content;
-  padding: 25px;
+  padding: 15px 25px;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 18px;
   z-index: 2;
+}
+@media (max-width: 788.99px) {
+  .reel-content .reel-description-item {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 15px;
+    border-radius: 10px;
+  }
 }
 .reel-content .item1 {
   position: absolute;
   top: 65%;
   left: 13%;
 }
+@media (max-width: 788.99px) {
+  .reel-content .item1 {
+    top: 20%;
+  }
+}
 .reel-content .item2 {
   position: absolute;
   top: 50%;
   left: 54%;
+}
+@media (max-width: 788.99px) {
+  .reel-content .item2 {
+    top: 30%;
+  }
 }
 .reel-content .item3 {
   position: absolute;
   top: 110%;
   left: 30%;
 }
+@media (max-width: 788.99px) {
+  .reel-content .item3 {
+    top: 65%;
+    left: 10%;
+  }
+}
 .reel-content .item4 {
   position: absolute;
   top: 100%;
   left: 71%;
+}
+@media (max-width: 788.99px) {
+  .reel-content .item4 {
+    top: 75%;
+    left: 60%;
+  }
+}
+
+.notab {
+  margin-top: 400px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 788.99px) {
+  .notab {
+    display: none;
+  }
+}
+.notab-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("img/notab/bg.png") center/cover no-repeat;
+  z-index: -1;
+}
+.notab-img {
+  width: 100%;
+  max-width: 850px;
 }
 
 /*# sourceMappingURL=style.css.map */
