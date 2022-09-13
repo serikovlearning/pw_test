@@ -15,6 +15,8 @@ nav {
   display: flex;
   align-items: center;
 
+
+
   & .logotype__item {
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
@@ -34,6 +36,10 @@ nav {
 
   & .company-name {
     margin: 0 100px 0 0;
+
+    @media (max-width: $breakpoint1100) {
+      margin: 0 20% 0 0;
+    }
   }
 
   & .account {
@@ -52,24 +58,55 @@ nav {
   }
 }
 
+.header-content {
+  @media (max-width: $breakpoint1100) {
+    overflow-x: hidden;
+    background-clip: padding-box;
+  }
+
+
+}
+
 .header-content__wrapper {
   margin-top: -150px;
   width: 100%;
   display: flex;
-  //justify-content: space-between;
   align-items: center;
 }
 
 .header-section {
+
+
   &__title {
     @include section-title;
     margin-bottom: 130px;
+
+    @media (max-width: $breakpoint1100) {
+      font-size: 48px;
+      margin-bottom: 100px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 35px;
+      margin-bottom: 30px;
+      line-height: 1.14;
+    }
   }
 
   &__text {
     @include section-text;
     margin-left: 105px;
     position: relative;
+
+    @media (max-width: $breakpoint1100) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+      margin-left: 0;
+      line-height: 22px;
+    }
 
     &:before {
       content: '';
@@ -81,6 +118,10 @@ nav {
       background-color: white;
       transform: rotate(120deg);
 
+
+      @media (max-width: $breakpoint1100) {
+        display: none;
+      }
     }
 
     &:after {
@@ -95,6 +136,9 @@ nav {
       position: absolute;
       z-index: -1;
       opacity: 0.8;
+      @media (max-width: $breakpoint1100) {
+        display: none;
+      }
     }
   }
 
@@ -103,8 +147,22 @@ nav {
 .header-section-left {
   height: 900px;
   width: 400px;
-  margin-left: 100px;
+  margin-left: 80px;
   position: relative;
+  
+  @media (max-width: $breakpoint1100) {
+    margin-top: 150px;
+    height: 800px;
+    margin-left: 40px;
+  }
+
+
+  @media (max-width: $breakpoint768) {
+    margin-left: 0;
+    margin-top: 100px;
+    height: 800px;
+    width: 300px;
+  }
 
   &:after {
     content: "";
@@ -113,17 +171,31 @@ nav {
     width: 600px;
     height: 150px;
     top: 0;
+    left: 0;
     border-radius: 300px 200px 50px 69px;
     transform: rotate(20deg);
-    filter: blur(250px);
-    opacity: 0.9;
+    filter: blur(200px);
     z-index: -1;
+
+    @media (max-width: $breakpoint1100) {
+      width: 400px;
+      height: 150px;
+      top: 200px;
+      left: -200px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      top: 170px;
+      left: -120px;
+      transform: rotate(40deg);
+    }
   }
 
   & .header-img {
     height: 100%;
-
-
+    @media (max-width: $breakpoint768) {
+      height: 90%;
+    }
   }
 }
 
@@ -131,8 +203,18 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding-right: 50px;
+  //padding-right: 50px;
   align-items: center;
+
+  @media (max-width: $breakpoint768) {
+    margin-top: -100px;
+
+  }
+  @media (max-width: $breakpoint477) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .footer-text {
@@ -142,9 +224,26 @@ nav {
   font-size: 35px;
   line-height: 70px;
   color: white;
+
+  @media (max-width: $breakpoint768) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.footer-img-wrapper {
+  display: flex;
+  width: 33%;
+  gap: 30px;
+  justify-content: center;
 }
 .footer-img {
-  width: 25%;
-  height: 15%;
   cursor: pointer;
+  
+  @media (max-width: $breakpoint1100) {
+    width: 40%;
+  }
+
+  @media (max-width: $breakpoint768) {
+    width: 50%;
+  }
 }

@@ -9,8 +9,12 @@ body {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: $breakpoint1100) {
+  }
 }
 
 @mixin section-title {
@@ -18,7 +22,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
-  line-height: 70px;
+  line-height: 109%;
   color: $white;
 }
 
@@ -36,6 +40,10 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 1.36;
   color: $white;
+
+  @media (max-width: $breakpoint768) {
+    font-size: 12px;
+  }
 }
