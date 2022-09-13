@@ -6,33 +6,87 @@
 @import './scss/contact';
 @import './scss/goals';
 @import './scss/scanner';
+@import 'scss/tools';
+@import "./scss/code";
+@import "./scss/qr";
 
-.tool__wrapper {
-  margin-top: 100px;
+.reel-content {
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+  flex-direction: column;
+  margin-top: 100px;
+  position: relative;
 
-  @media (max-width: $breakpoint1100) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .reel-img {
+    margin: 0 auto;
+    width: 838px;
   }
 
-  .tool-info {
-    flex: 1 0 45%;
-    @media (max-width: $breakpoint1100) {
-      flex: 0 0 50%;
+  .reel-info {
+    align-self: flex-end;
+    width: 40%;
+
+    &-title {
+      @include section-title;
+
+      &:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(12.08deg, rgba(241, 1, 191, 0.12) 2.82%, rgba(0, 102, 255, 0.12) 97.06%);
+        box-shadow: 5px 5px 100px rgba(250, 0, 255, 0.2);
+        width: 300px;
+        height: 300px;
+        top: 30%;
+        right: -30%;
+        transform: rotate(20deg) translateX(-50%);
+        border-radius: 300px 200px 50px 69px;
+        filter: blur(50px);
+        z-index: -2;
+      }
+    }
+
+    &-text {
+      @include section-text;
     }
   }
 
-  & .tool-info-title{
-    @include section-title
+  .reel-description-item {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22.8021px;
+    line-height: 27px;
+    background: $bg;
+
+    width: fit-content;
+    padding: 25px;
+    color: $white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    z-index: 2;
   }
 
-  & .tool-info-text{
-    @include section-text
+  .item1 {
+    position: absolute;
+    top: 65%;
+    left: 13%;
+  }
+
+  .item2 {
+    position: absolute;
+    top: 50%;
+    left: 54%;
+  }
+
+  .item3 {
+    position: absolute;
+    top: 110%;
+    left: 30%;
+  }
+
+  .item4 {
+    position: absolute;
+    top: 100%;
+    left: 71%;
   }
 }

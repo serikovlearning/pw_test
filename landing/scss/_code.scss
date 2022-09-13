@@ -1,0 +1,101 @@
+.code {
+  position: relative;
+  height: 100vh;
+  margin-top: 100px;
+
+  @media (max-width: $breakpoint1100) {
+    height: fit-content;
+  }
+
+  &-bg {
+    width: 100%;
+    height: 700px;
+    background: url('img/code/bg.png') center/cover no-repeat, $bg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @media (max-width: $breakpoint1100) {
+      height: 335px;
+      background: url('img/code/dj.png') center/cover no-repeat, $bg;
+    }
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 80px;
+    top: 250px;
+
+    @media (max-width: $breakpoint1100) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .code-left {
+    width: 100%;
+
+    @media (max-width: $breakpoint1100) {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url("img/code/whiskey.png") center/cover no-repeat, $bg;
+        height: 300px;
+        width: 390px;
+        top: 405px;
+        left: 60%;
+        transform: translateX(-50%);
+
+        @media (max-width: $breakpoint1100) {
+          filter: blur(5px);
+        }
+        @media (max-width: $breakpoint477) {
+          filter: blur(0px);
+        }
+      }
+    }
+
+    &-title {
+      @include section-title;
+    }
+
+    &-text {
+      @include section-text;
+    }
+
+    &-images {
+      margin-top: 60px;
+      display: flex;
+      gap: 30px;
+
+      @media (max-width: $breakpoint1100) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }
+
+  .order1 {
+    @media (max-width: $breakpoint1100) {
+      position: relative;
+      top: 250px;
+    }
+  }
+
+  .order2 {
+    position: relative;
+    top: 330px;
+
+    @media (max-width: $breakpoint1100) {
+      position: relative;
+      top: 250px;
+    }
+  }
+}

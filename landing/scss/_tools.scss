@@ -1,0 +1,39 @@
+.tool__wrapper {
+  margin-top: 100px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  @media (max-width: $breakpoint1100) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .tool-info {
+    flex: 1 0 40%;
+    @media (max-width: $breakpoint1100) {
+      flex: 0 0 50%;
+    }
+  }
+
+  & .tool-info-title{
+    @include section-title
+  }
+
+  & .tool-info-text{
+    @include section-text
+  }
+
+  .tool-img {
+    width: 75%;
+
+    @media (max-width: $breakpoint1100) {
+      margin-top: 50px;
+
+    }
+  }
+}
