@@ -76,7 +76,7 @@ nav {
 
 
   &__title {
-    @include section-title;
+    @include first-section-title;
     margin-bottom: 130px;
 
     @media (max-width: $breakpoint1100) {
@@ -92,7 +92,7 @@ nav {
   }
 
   &__text {
-    @include section-text;
+    @include first-section-text;
     margin-left: 105px;
     position: relative;
 

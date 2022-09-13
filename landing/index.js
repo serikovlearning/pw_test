@@ -18,4 +18,4 @@ function openCookie() {
     }, 2000)
 }
 
-openCookie()
+// openCookie()

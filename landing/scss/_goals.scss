@@ -1,0 +1,97 @@
+
+.goals {
+  position: relative;
+  height: 100vh;
+
+  @media (max-width: $breakpoint768) {
+    margin-top: 200px;
+
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("./img/goals/goals-phone.png");
+    background-color: $bg;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-x: left;
+    background-position-y: center;
+    z-index: -1;
+
+
+
+    @media (max-width: $breakpoint768) {
+      top: 5%;
+      background-image: url("./img/goals/goals-phone-rotate.png");
+      background-size: 60%;
+      background-position-x: center;
+    }
+
+    @media (max-width: $breakpoint477) {
+      top: 5%;
+      background-image: url("./img/goals/goals-phone-rotate.png");
+      background-size: 78%;
+      background-position-x: center;
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  .goals-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    @media (max-width: $breakpoint768) {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    & .goals-content-title, & .goals-content-text {
+      width: 30%;
+
+      @media (max-width: $breakpoint768) {
+        width: 90%;
+      }
+    }
+
+    &-title {
+      @include section-title;
+      margin: -100px 0 20px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        background: radial-gradient(rgba(250, 0, 255, .3), rgba(250, 0, 255, 0.1));
+        box-shadow: 5px 5px 100px rgba(250, 0, 255, .2);
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 75px;
+        border-radius: 300px 200px 50px 69px;
+        transform: rotate(20deg);
+        filter: blur(30px);
+        z-index: -1;
+        @media (max-width: $breakpoint768) {
+          left: 0;
+        }
+      }
+
+    }
+
+    &-text {
+      @include section-text;
+    }
+  }
+}
