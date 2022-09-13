@@ -2,6 +2,14 @@
 .scanner {
   height: 1060px;
   position: relative;
+
+  @media (max-width: $breakpoint1100) {
+    margin-top: 200px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin-top: 700px;
+  }
 }
 .scanner-bg {
   width: 100%;
@@ -11,6 +19,10 @@
   top: 0;
   left: 0;
   z-index: -1;
+  @media (max-width: $breakpoint768) {
+    height: 350px;
+    top: -50%;
+      }
 }
 
 .scanner-content {
@@ -31,7 +43,7 @@
     
   }
   @media (max-width: $breakpoint768) {
-    margin-top: -250px;
+    margin-top: -100px;
   }
 
   & .scanner-content-item {

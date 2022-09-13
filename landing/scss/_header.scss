@@ -7,10 +7,13 @@ nav {
   align-items: center;
 
 
-
   & .logotype__item {
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
+    
+    @media (max-width: $breakpoint477) {
+      width: 70%;
+    }
   }
 
   & .nav-menu__item {
@@ -29,8 +32,14 @@ nav {
     margin: 0 100px 0 0;
 
     @media (max-width: $breakpoint1100) {
-      margin: 0 30% 0 0;
+      margin: 0 25% 0 0;
     }
+
+    @media (max-width: $breakpoint477) {
+      width: 70%;
+    }
+
+
   }
 
   & .account {
@@ -42,7 +51,6 @@ nav {
     & .login {
       @media (max-width: $breakpoint477) {
         display: none;
-
       }
     }
 
@@ -56,25 +64,19 @@ nav {
   }
 }
 
-.header-content {
-  @media (max-width: $breakpoint1100) {
-    overflow-x: hidden;
-    background-clip: padding-box;
-  }
-
-
-}
-
 .header-content__wrapper {
-  margin-top: -150px;
+  margin: 100px 0 150px;
   width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .header-section {
+  @media (max-width: $breakpoint768) {
+   flex: 2 0 240px;
+  }
+
   &__title {
     @include first-section-title;
     margin-bottom: 130px;
@@ -116,7 +118,6 @@ nav {
       background-color: white;
       transform: rotate(120deg);
 
-
       @media (max-width: $breakpoint1100) {
         display: none;
       }
@@ -139,55 +140,51 @@ nav {
       }
     }
   }
-
 }
 
 .header-section-right {
   position: relative;
 
-  @media (max-width: $breakpoint1100) {
-    margin-top: 150px;
-    margin-left: 40px;
-  }
-
-
   @media (max-width: $breakpoint768) {
     margin-left: 0;
-    margin-top: 100px;
-    //height: 800px;
-    //width: 300px;
   }
 
   &:after {
     content: "";
     position: absolute;
-    //background-color: $purple-shadow;
     background: radial-gradient(rgba(250, 0, 255, 0.2), rgba(250, 0, 255, 0.1));
     box-shadow: 5px 5px 100px rgba(250, 0, 255, 0.2);
     width: 600px;
     height: 300px;
-    top: 0;
-    left: -75%;
+    top: -15%;
+    left: 0;
     border-radius: 300px 200px 50px 69px;
     transform: rotate(20deg);
-    //opacity: 0.8;
     filter: blur(30px);
     z-index: -1;
 
-    @media (max-width: $breakpoint1100) {
-      width: 400px;
-      height: 150px;
-      //top: 200px;
-      //left: -40px;
+    @media (max-width: $breakpoint768) {
+      top: -5%;
+      left: -50%;
       transform: rotate(60deg);
+    }
+    @media (max-width: $breakpoint477) {
+      top: -10%;
+      left: -100%;
     }
   }
 
   & .header-img {
-    //height: 10%;
-    width: 80%;
+    float: right;
+    min-height: 323px;
+    min-width: 161px;
+
+    @media (max-width: $breakpoint1100) {
+      width: 80%;
+    }
+
     @media (max-width: $breakpoint768) {
-      height: 90%;
+      width: 70%;
     }
   }
 }
@@ -199,13 +196,14 @@ nav {
   align-items: center;
 
   @media (max-width: $breakpoint768) {
+    padding: 0;
     margin-top: -100px;
-
-  }
-  @media (max-width: $breakpoint477) {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+  }
+  @media (max-width: $breakpoint477) {
+
   }
 }
 
@@ -218,10 +216,13 @@ nav {
   color: white;
 
   @media (max-width: $breakpoint768) {
+    flex: 1 0 100%;
     font-size: 24px;
+    text-align: center;
     line-height: 29px;
   }
 }
+
 .footer-img-wrapper {
   display: flex;
   width: 33%;
@@ -229,14 +230,17 @@ nav {
   justify-content: center;
 
   @media (max-width: $breakpoint768) {
+    flex-direction: column;
+    align-items: center;
     width: 40%;
   }
 }
+
 .footer-img {
   cursor: pointer;
 
   @media (max-width: $breakpoint1100) {
-    width: 40%;
+    width: 55%;
   }
 
   @media (max-width: $breakpoint477) {
