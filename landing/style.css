@@ -187,6 +187,11 @@ nav {
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 477.99px) {
+  .nav-menu .account .login {
+    display: none;
+  }
+}
 .nav-menu .account span {
   font-family: "Noto Sans", sans-serif;
   font-style: normal;
@@ -311,14 +316,15 @@ nav {
 .header-section-left:after {
   content: "";
   position: absolute;
-  background-color: #FA00FF;
+  background: radial-gradient(rgba(250, 0, 255, 0.2), rgba(250, 0, 255, 0.1));
+  box-shadow: 5px 5px 100px rgba(250, 0, 255, 0.2);
   width: 600px;
-  height: 150px;
-  top: 0;
-  left: 0;
+  height: 300px;
+  top: 50px;
+  left: -50px;
   border-radius: 300px 200px 50px 69px;
   transform: rotate(20deg);
-  filter: blur(200px);
+  filter: blur(30px);
   z-index: -1;
 }
 @media (max-width: 1098.99px) {
@@ -326,14 +332,8 @@ nav {
     width: 400px;
     height: 150px;
     top: 200px;
-    left: -200px;
-  }
-}
-@media (max-width: 767.99px) {
-  .header-section-left:after {
-    top: 170px;
-    left: -120px;
-    transform: rotate(40deg);
+    left: -40px;
+    transform: rotate(60deg);
   }
 }
 .header-section-left .header-img {
@@ -385,6 +385,11 @@ nav {
   gap: 30px;
   justify-content: center;
 }
+@media (max-width: 767.99px) {
+  .footer-img-wrapper {
+    width: 40%;
+  }
+}
 
 .footer-img {
   cursor: pointer;
@@ -394,9 +399,9 @@ nav {
     width: 40%;
   }
 }
-@media (max-width: 767.99px) {
+@media (max-width: 477.99px) {
   .footer-img {
-    width: 50%;
+    width: 60%;
   }
 }
 
