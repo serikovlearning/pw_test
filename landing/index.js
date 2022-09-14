@@ -18,7 +18,7 @@ function openCookie() {
     }, 2000)
 }
 
-// openCookie()
+openCookie()
 
 const goals = document.querySelector('.goals'),
     goalsBg = goals.querySelector('.goals-bg'),
