@@ -45,7 +45,7 @@ function goalsAnimation(entry) {
                 goalsBg.style.opacity = '1'
                 goalsBg.style.transform = 'rotate(-360deg)'
             }, 1000)
-        }, 750)
+        }, 500)
     }
 }
 

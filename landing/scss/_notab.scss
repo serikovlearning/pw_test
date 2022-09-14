@@ -7,6 +7,10 @@
   align-items: center;
   position: relative;
 
+  @media (max-width: $breakpoint1100) {
+    margin-top: 0;
+  }
+
   @media (max-width: $breakpoint768) {
     display: none;
   }

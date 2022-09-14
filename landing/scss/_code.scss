@@ -78,6 +78,10 @@
         align-items: center;
         justify-content: center;
       }
+
+      & .code-img-item {
+        cursor: pointer;
+      }
     }
 
   }

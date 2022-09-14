@@ -25,6 +25,10 @@
   top: 0;
   left: 0;
   z-index: -1;
+
+  @media (max-width: $breakpoint1100) {
+    top: -30%;
+  }
   @media (max-width: $breakpoint768) {
     height: 350px;
     top: -30%;
