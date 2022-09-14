@@ -362,6 +362,7 @@ body {
   transform: translateY(50%);
   box-shadow: 0px -10px 10px -5px rgba(0, 0, 0, 0.3);
   display: none;
+  z-index: 100;
 }
 @media (max-width: 788.99px) {
   .cookie {

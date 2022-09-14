@@ -4,7 +4,7 @@ const cookie = document.querySelector('.cookie'),
 function openCookie() {
     setTimeout(() => {
         cookie.style.display = 'flex'
-    }, 1999)
+    }, 1500)
     setTimeout(() => {
         cookie.style.transform = 'translateY(0%)'
         cookie.style.opacity = '1'
