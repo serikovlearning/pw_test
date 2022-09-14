@@ -21,8 +21,14 @@
     background-position-x: left;
     background-position-y: center;
     z-index: -1;
+    transition: 1s ease-in-out;
 
-
+    &.active {
+      top: 5%;
+      background-image: url("./img/goals/goals-phone-rotate.png");
+      background-size: 40%;
+      background-position-x: center;
+    }
 
     @media (max-width: $breakpoint768) {
       top: 5%;
@@ -48,6 +54,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    transition: 2s ease-in-out;
+
+    &.active {
+      transform: translateX(50%);
+      opacity: 0;
+    }
 
     @media (max-width: $breakpoint768) {
       justify-content: flex-start;
@@ -56,6 +68,7 @@
 
     & .goals-content-title, & .goals-content-text {
       width: 30%;
+
 
       @media (max-width: $breakpoint768) {
         width: 90%;

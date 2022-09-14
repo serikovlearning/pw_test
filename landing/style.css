@@ -498,6 +498,13 @@ body {
   background-position-x: left;
   background-position-y: center;
   z-index: -1;
+  transition: 1s ease-in-out;
+}
+.goals-bg.active {
+  top: 5%;
+  background-image: url("./img/goals/goals-phone-rotate.png");
+  background-size: 40%;
+  background-position-x: center;
 }
 @media (max-width: 788.99px) {
   .goals-bg {
@@ -523,6 +530,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  transition: 2s ease-in-out;
+}
+.goals .goals-content.active {
+  transform: translateX(50%);
+  opacity: 0;
 }
 @media (max-width: 788.99px) {
   .goals .goals-content {

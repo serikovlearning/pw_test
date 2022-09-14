@@ -37,11 +37,11 @@ function dragSlide(side) {
     btnActive = true
 
     if (changedWidth <= -9000 && !side) {
-        slider.style.background = `url(./img/10.jpg) center/cover no-repeat`
+        slider.style.background = `url(./slider/img/10.jpg) center/cover no-repeat`
         slideCounter = 1
     }
     if (changedWidth >= 0 && side) {
-        slider.style.background = `url(./img/1.jpg) center/cover no-repeat`
+        slider.style.background = `url(./slider/img/1.jpg) center/cover no-repeat`
         slideCounter = -10
     }
 
@@ -87,18 +87,20 @@ function checkPagValue() {
 checkPagValue()
 pagBtns.forEach((btn, index) => {
   btn.addEventListener('click', () => {
-      pagBtns.forEach(item => {
-          item.classList.remove('active')
-      })
-      btn.classList.add('active')
-      if (slideCounter < -index) {
-          slideCounter = -index - 1
-          dragSlide(true)
-          slideCounter += 1
-      } else {
-          slideCounter = -index + 1
-          dragSlide(false)
-          slideCounter -= 1
+      if (!btnActive && !btn.classList.contains('active')) {
+          pagBtns.forEach(item => {
+              item.classList.remove('active')
+          })
+          btn.classList.add('active')
+          if (slideCounter < -index) {
+              slideCounter = -index - 1
+              dragSlide(true)
+              slideCounter += 1
+          } else {
+              slideCounter = -index + 1
+              dragSlide(false)
+              slideCounter -= 1
+          }
       }
   })
 })
